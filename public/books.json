@@ -1,0 +1,131 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/TBS30T0/pngwing-1-1.png",
+      "review": " A captivating tale of love, longing, and the American Dream, Fitzgerald's prose sparkles with elegance. A captivating tale of love, longing, and the American Dream, Fitzgerald's prose sparkles with elegance.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Classic",
+      "tags": ["Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/6rfdJNQ/kindpng-4022054-1.png",
+      "review": "A poignant exploration of racial injustice and moral growth, Harper Lee's masterpiece is timeless. A poignant exploration of racial injustice and moral growth, Harper Lee's masterpiece is timeless.",
+      "totalPages": 324,
+      "rating": 4.8,
+      "category": "Classic",
+      "tags": ["Coming of Age", "Legal Drama"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "Wuthering Heights",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/VJ45F1J/kindpng-1064993.png",
+      "review": "Orwell's dystopian vision remains chillingly relevant, warning against the dangers of totalitarianism and surveillance. A poignant exploration of racial injustice and moral growth, Harper Lee's masterpiece is timeless.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/HKQSgNt/kindpng-7318921.png",
+      "review": "Holden Caulfield's journey of self-discovery and disillusionment is as poignant today as it was when first published. Holden Caulfield's journey of self-discovery and disillusionment is as poignant today as it was when first published.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Classic",
+      "tags": ["Coming of Age", "Cultural"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": " https://i.ibb.co/XYwVphz/kindpng-81724-1.png",
+      "review": "Austen's wit and keen observation of human nature shine in this timeless tale of love, manners, and societal expectations. Austen's wit and keen observation of human nature shine in this timeless tale of love, manners, and societal expectations.",
+      "totalPages": 432,
+      "rating": 4.6,
+      "category": "Classic",
+      "tags": ["Romance", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": " https://i.ibb.co/L8cC2pV/kindpng-2193744-1.png",
+      "review": "Tolkien's enchanting adventure takes readers on an epic journey through Middle-earth, filled with magic, danger, and heroism. Tolkien's enchanting adventure takes readers on an epic journey through Middle-earth, filled with magic, danger, and heroism.",
+      "totalPages": 310,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Quest"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1937
+    },
+    {
+      "bookId": 7,
+      "bookName": "The Alchemist",
+      "author": "Paulo Coelho",
+      "image": "https://i.ibb.co/8XM4tmG/kindpng-4945926-1.png",
+      "review": "Coelho's allegorical tale inspires readers to pursue their dreams and listen to their hearts, reminding us of the importance of self-discovery and personal legend.",
+      "totalPages": 208,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Philosophical", "Spiritual"],
+      "publisher": "HarperCollins",
+      "yearOfPublishing": 1988
+    },
+    {
+      "bookId": 8,
+      "bookName": "Gone Girl",
+      "author": "Gillian Flynn",
+      "image": "https://i.ibb.co/58nBZQX/kindpng-5624060-1.png",
+      "review": "Flynn's dark and twisty thriller keeps readers guessing until the very end, with its complex characters and shocking revelations. Tolkien's enchanting adventure takes readers on an epic journey through Middle-earth, filled with magic, danger, and heroism.",
+      "totalPages": 432,
+      "rating": 4.4,
+      "category": "Mystery",
+      "tags": ["Suspense", "Psychological"],
+      "publisher": "Crown Publishing Group",
+      "yearOfPublishing": 2012
+    },
+    {
+      "bookId": 9,
+      "bookName": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "image": "https://i.ibb.co/8XM4tmG/kindpng-4945926-1.png",
+      "review": "A gripping psychological thriller that will leave you guessing until the last page. Tolkien's enchanting adventure takes readers on an epic journey through Middle-earth, filled with magic, danger, and heroism.",
+      "totalPages": 336,
+      "rating": 4.6,
+      "category": "Thriller",
+      "tags": ["Psychological", "Mystery"],
+      "publisher": "Celadon Books",
+      "yearOfPublishing": 2019
+    }
+    
+  ]
+  
+ 
+ 
+  
+  
+  
+  
+
+
+
+
