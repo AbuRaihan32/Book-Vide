@@ -11,7 +11,7 @@ const NaveBar = () => {
                         </div>
                         <nav tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/'}> Home</NavLink>
-                            <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/books'}> Listed Books</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/books/read'}> Listed Books</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/page'}> Pages to Read</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/feedBack'}> FeedBacks </NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'text-[#23BE0A] border p-[4px] pb-1 border-[#23BE0A] rounded-md' : ''} to={'/about'}> About Us </NavLink>

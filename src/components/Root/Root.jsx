@@ -1,4 +1,4 @@
-import { Outlet, useNavigation} from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import NaveBar from "../NaveBar/NaveBar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,9 +10,11 @@ const Root = () => {
             <div className="h-[70px]">
                 <NaveBar></NaveBar>
             </div>
-            {
-                navigation.state === 'loading' ? <PuffLoader color="#36d7b7" /> : <Outlet></Outlet>
-            }
+            <div className="w-[95%] mx-auto">
+                {
+                    navigation.state === 'loading' ? <div className="flex justify-center items-center min-h-[calc(100vh-400px)]"> <PuffLoader size={150} color="#36d7b7" /></div> : <Outlet></Outlet>
+                }
+            </div>
             <ToastContainer></ToastContainer>
         </div>
     );

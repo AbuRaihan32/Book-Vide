@@ -36,7 +36,8 @@ const PageRead = () => {
     return (
         <div>
             <BarChart
-                width={1280}
+                className='mx-auto'
+                width={1000}
                 height={500}
                 data={readBooks}
                 margin={{
@@ -61,5 +62,4 @@ const PageRead = () => {
         </div>
     );
 };
-
 export default PageRead;

@@ -43,7 +43,7 @@ const ListBooks = () => {
                         </NavLink>
                     </div>
                     <div className=" border-b-[3px] flex-grow text-end">
-                        <button onClick={clearBtnHandler} className="btn">Click Here To Clear History</button>
+                        <button onClick={clearBtnHandler} className="btn">Click for Clear</button>
                     </div>
                 </div>
                 <MyContext.Provider value={{ sortedItem }}>

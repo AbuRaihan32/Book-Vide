@@ -7,7 +7,7 @@ const BookDetails = () => {
     const idInt = parseInt(id);
 
     const singleBook = books.find(book => book.bookId === idInt);
-    const { bookId, bookName, author, image, tags, category, rating, review, totalPages, publisher, yearOfPublishing, } = singleBook;
+    const { bookName, author, image, tags, category, rating, review, totalPages, publisher, yearOfPublishing, } = singleBook;
 
     const readBtnHandler = () => {
         saveBookInLS(id)
@@ -19,7 +19,7 @@ const BookDetails = () => {
 
 
     return (
-        <div className="w-[95%] mx-auto flex gap-8">
+        <div className="w-[95%] mx-auto md:flex gap-8">
             <div className="w-full bg-[#1313130D] rounded-2xl">
                 <img className="w-[80%] h-full py-10 mx-auto" src={image} alt="" />
             </div>
@@ -45,7 +45,7 @@ const BookDetails = () => {
                                 <p href="#" className="text-[18px] font-bold bg-[#23BE0A0D] rounded-3xl py-2 px-5 hover:underline text-[#23BE0A]">#{tags[1]}</p>
                             </div>
                         </div>
-                        <div className="space-y-2 w-[50%]">
+                        <div className="space-y-2 md:w-[50%]">
                             <ul className="ml-4 space-y-1">
                                 <li>
                                     <p className="flex justify-between"><span>Number Of Page:</span> <span className="font-bold">{totalPages}</span></p>
