@@ -1,29 +1,63 @@
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { getBookFromLS } from '../Utils';
+import { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import NoRead from '../NoRead';
 
-const salesDataWithProfit = [
-    { month: 'January', sales: 1000, profit: 200 },
-    { month: 'February', sales: 1200, profit: 250 },
-    { month: 'March', sales: 1100, profit: 220 },
-    { month: 'April', sales: 1400, profit: 280 },
-    { month: 'May', sales: 1300, profit: 260 },
-    { month: 'June', sales: 1500, profit: 300 },
-    { month: 'July', sales: 1700, profit: 340 },
-    { month: 'August', sales: 1600, profit: 320 },
-    { month: 'September', sales: 1800, profit: 360 },
-    { month: 'October', sales: 3000, profit: 1880 },
-    { month: 'November', sales: 2000, profit: 1100 },
-    { month: 'December', sales: 1800, profit: 1220 },
-];
+const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+
+
+const getPath = (x, y, width, height) => {
+    return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
+    ${x + width / 2}, ${y}
+    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
+    Z`;
+};
+
+const TriangleBar = (props) => {
+    const { fill, x, y, width, height } = props;
+
+    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+};
 
 const PageRead = () => {
+    const [readBooks, setReadBooks] = useState([]);
+    const allBook = useLoaderData();
+    useEffect(() => {
+        const LSReadBooks = getBookFromLS();
+        let bookArr = []
+        for (const i of LSReadBooks) {
+            const book = allBook.find(b => b.bookId === parseInt(i))
+            { book && bookArr.push(book) }
+        }
+        setReadBooks(bookArr)
+    }, [allBook]);
+
     return (
         <div>
-            <LineChart width={1200} height={400} data={salesDataWithProfit}>
-                <Line type={'monotone'} dataKey={'sales'} stroke="red"></Line>
-                <CartesianGrid stroke='blue'></CartesianGrid>
-                <XAxis dataKey={'month'}></XAxis>
-                <YAxis></YAxis>
-            </LineChart>
+            <BarChart
+                width={1280}
+                height={500}
+                data={readBooks}
+                margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="bookName" />
+                <YAxis />
+                <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                    {readBooks.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                    ))}
+                </Bar>
+            </BarChart>
+            {
+                readBooks.length === 0 && <NoRead text={"No books read"}></NoRead>
+            }
         </div>
     );
 };

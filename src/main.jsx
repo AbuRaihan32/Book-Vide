@@ -13,11 +13,15 @@ import Root from './components/Root/Root.jsx';
 import BookDetails from './components/BookDetails.jsx';
 import ReadBooks from './components/ReadBooks.jsx';
 import WishPage from './components/WishPage.jsx';
+import FeedBack from './components/FeedBack.jsx';
+import About from './components/About.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const route = createBrowserRouter([
   {
     path: '/',
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -42,12 +46,21 @@ const route = createBrowserRouter([
       },
       {
         path: '/page',
-        element: <PageRead></PageRead>
+        element: <PageRead></PageRead>,
+        loader: () => fetch('/books.json')
       },
       {
         path: '/bookDetails/:id',
         element: <BookDetails></BookDetails>,
         loader: () => fetch('/books.json')
+      },
+      {
+        path: '/feedBack',
+        element: <FeedBack></FeedBack>
+      },
+      {
+        path: '/about',
+        element: <About></About>
       }
     ]
   }

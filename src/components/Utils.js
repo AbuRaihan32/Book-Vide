@@ -15,12 +15,12 @@ const saveWishBookInLS = (id) => {
     if (!isExist && !isRead) {
         currentBook.push(id);
         localStorage.setItem('wish', JSON.stringify(currentBook))
-        toast.success('You have successfully added in wish list')
+        toast.success('You have successfully added to wishlist')
     }else if(isRead){
-        toast.error("You Can't add in wish list After Read")
+        toast.error("You cannot add to wishlist after reading")
     }
     else {
-        toast.error('You have been already added')
+        toast.error('You have already added it to wishlist')
     }
 }
 
@@ -48,7 +48,7 @@ const saveWishBookInLS = (id) => {
             removeWishAfterRead(id)
         }
         else {
-            toast.error('You have been already read')
+            toast.error('You have already read it')
         }
     }
     export { getBookFromLS, saveBookInLS , getWishBookFromLS, saveWishBookInLS}

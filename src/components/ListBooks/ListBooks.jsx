@@ -1,6 +1,18 @@
+import { createContext, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-
+export const MyContext = createContext('')
 const ListBooks = () => {
+    const [sortedItem, setSortedItem] = useState('');
+
+    const sortBtnHandler = (e) => {
+        setSortedItem(e.target.innerText)
+    }
+
+    const clearBtnHandler = () =>{
+        localStorage.clear();
+    }
+
+
     return (
         <div className="mt-5">
             <div className="py-8 w-full bg-[#1313130D] text-center rounded-2xl">
@@ -10,8 +22,9 @@ const ListBooks = () => {
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1">Sort By  &nbsp;  <span className="text-3xl rotate-90 mt-1">&#8250;</span></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li onClick={sortBtnHandler} className="btn">Rating</li>
+                        <li onClick={sortBtnHandler} className="btn">Number of Pages</li>
+                        <li onClick={sortBtnHandler} className="btn">Publishing Year</li>
                     </ul>
                 </div>
             </div>
@@ -29,9 +42,13 @@ const ListBooks = () => {
                             <span>Wishlist Books</span>
                         </NavLink>
                     </div>
-                    <div className="px-5 py-3 border-b-[3px] flex-grow"></div>
+                    <div className=" border-b-[3px] flex-grow text-end">
+                        <button onClick={clearBtnHandler} className="btn">Click Here To Clear History</button>
+                    </div>
                 </div>
-                <Outlet></Outlet>
+                <MyContext.Provider value={{ sortedItem }}>
+                    <Outlet></Outlet>
+                </MyContext.Provider>
             </div>
 
         </div>
